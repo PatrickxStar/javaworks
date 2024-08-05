@@ -1,4 +1,4 @@
-package org.example.CodingBat;
+
 
 public int sumDouble(int a, int b) {
     // Calculate the sum of a and b
@@ -11,5 +11,8 @@ public int sumDouble(int a, int b) {
         // Otherwise, return the sum
         return sum;
     }
+}
+
+public void main() {
 }
 

@@ -1,4 +1,3 @@
-package org.example.CodingBat;
 
 public int diff21(int n) {
     // Calculate the absolute difference between n and 21
@@ -11,4 +10,7 @@ public int diff21(int n) {
         // Otherwise, return the absolute difference
         return difference;
     }
+}
+
+public void main() {
 }

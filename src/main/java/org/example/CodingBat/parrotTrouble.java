@@ -1,4 +1,3 @@
-package org.example.CodingBat;
 
 public boolean parrotTrouble(boolean talking, int hour) {
     // Check if the parrot is talking and the hour is before 7 or after 20
@@ -7,5 +6,8 @@ public boolean parrotTrouble(boolean talking, int hour) {
     } else {
         return false; // We are not in trouble
     }
+}
+
+public void main() {
 }
 

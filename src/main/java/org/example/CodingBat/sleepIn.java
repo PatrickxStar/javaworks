@@ -1,4 +1,4 @@
-package org.example.CodingBat;
+
 
 public boolean sleepIn(boolean weekday, boolean vacation) {
     // If it's not a weekday or if we're on vacation, we can sleep in
@@ -7,5 +7,8 @@ public boolean sleepIn(boolean weekday, boolean vacation) {
     } else {
         return false; // We can't sleep in
     }
+}
+
+public void main() {
 }
 

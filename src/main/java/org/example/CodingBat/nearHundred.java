@@ -1,4 +1,3 @@
-package org.example.CodingBat;
 
 public boolean nearHundred(int n) {
     // Calculate the absolute difference between n and 100
@@ -12,4 +11,7 @@ public boolean nearHundred(int n) {
     } else {
         return false; // Return false otherwise
     }
+}
+
+public void main() {
 }
