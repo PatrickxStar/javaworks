@@ -27,38 +27,46 @@ public class Library {
 
     // Find all books published in a specific year
     public List<Book> findBooksByYear(int year) {
-        return books.stream().filter(book -> book.getPublicationYear() == year).collect(Collectors.toList());
+        return books.stream().filter(book -> book.getPublicationYear() == year)
+                .collect(Collectors.toList());
     }
 
     // Find all books by a specific author
     public List<Book> findBooksByAuthor(String author) {
-        return books.stream().filter(book -> book.getAuthor().equals(author)).collect(Collectors.toList());
+        return books.stream().filter(book -> book.getAuthor().equals(author))
+                .collect(Collectors.toList());
     }
 
     // Find the book with the most pages
     public Book findBookWithMostPages() {
-        return books.stream().max(Comparator.comparingInt(Book::getPages)).orElse(null);
+        return books.stream().max(Comparator.comparingInt(Book::getPages))
+                .orElse(null);
     }
 
     // Find all books with more than n pages
     public List<Book> findBooksWithMoreThanNPages(int pages) {
-        return books.stream().filter(book -> book.getPages() > pages).collect(Collectors.toList());
+        return books.stream().filter(book -> book.getPages() > pages)
+                .collect(Collectors.toList());
     }
 
     // Print all book titles sorted alphabetically
     public void printBookTitles() {
-        books.stream().map(Book::getTitle).sorted().forEach(System.out::println);
+        books.stream().map(Book::getTitle).sorted()
+                .forEach(System.out::println);
     }
 
     // Find all books in a specific category
     public List<Book> findBooksByCategory(String category) {
-        return books.stream().filter(book -> book.getCategory().equals(category)).collect(Collectors.toList());
+        return books.stream().filter(book -> book.getCategory().equals(category))
+                .collect(Collectors.toList());
     }
 
     // Loan out a book to a user
 // Loan out a book to a user
     public void loanBook(String title, User user) {
-        Optional<Book> bookOpt = books.stream().filter(book -> book.getTitle().equals(title) && !book.isOnLoan()).findFirst();
+        Optional<Book> bookOpt = books.stream()
+                .filter(book -> book.getTitle().equals(title) && !book.isOnLoan())
+                .findFirst();
         if (bookOpt.isPresent()) {
             Book book = bookOpt.get();
             book.setOnLoan(true);
@@ -133,12 +141,15 @@ public class Library {
 
     // Example usage of Predicate
     public List<Book> filterBooks(Predicate<Book> predicate) {
-        return books.stream().filter(predicate).collect(Collectors.toList());
+        return books.stream()
+                .filter(predicate)
+                .collect(Collectors.toList());
     }
 
     // Example usage of Function
     public List<String> transformBooks(Function<Book, String> function) {
-        return books.stream().map(function).collect(Collectors.toList());
+        return books.stream()
+                .map(function).collect(Collectors.toList());
     }
 
     // Example usage of Consumer
@@ -148,6 +159,9 @@ public class Library {
 
     // Method to get user by library card number
     public User getUserByLibraryCardNumber(String libraryCardNumber) {
-        return users.stream().filter(user -> user.getLibraryCardNumber().equals(libraryCardNumber)).findFirst().orElse(null);
+        return users.stream().filter(user -> user.getLibraryCardNumber()
+                .equals(libraryCardNumber))
+                .findFirst()
+                .orElse(null);
     }
 }
